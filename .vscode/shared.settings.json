@@ -1,0 +1,24 @@
+{
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "[javascript][typescript][javascriptreact][typescriptreact]": {
+    "editor.quickSuggestions": {
+      "other": "on",
+      "comments": "on",
+      "strings": "on"
+    },
+    "editor.codeActionsOnSave": {
+      "quickfix.biome": "explicit",
+      "source.organizeImports.biome": "explicit"
+    },
+    "editor.defaultFormatter": "biomejs.biome",
+    "path-autocomplete.pathMappings": {
+      "@": "${folder}/src",
+      "~": "${folder}",
+    }
+  },
+  "biome.lspBin": "node_modules/.bin/biome",
+  "files.watcherExclude": {
+    "**/routeTree.gen.ts": true
+  }
+}
