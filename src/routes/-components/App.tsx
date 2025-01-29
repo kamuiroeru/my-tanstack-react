@@ -1,7 +1,6 @@
 import reactLogo from "@/assets/react.svg";
-import "./App.css";
-import type { JSX } from "react";
 import type React from "react";
+import "./App.css";
 import viteLogo from "/vite.svg";
 
 function App(props: {

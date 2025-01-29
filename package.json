@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "format": "npx @biomejs/biome format --write ./src"
+    "format": "./node_modules/.bin/biome format --write ./src"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.98.0",
