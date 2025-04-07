@@ -1,6 +1,9 @@
 name: "Tell Merge All to Dependabot"
 description: "Tell Merge All to Dependabot"
 
+permissions:
+  pull-requests: write
+
 on:
   pull_request:
     types: [opened, synchronize]
