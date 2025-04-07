@@ -1,9 +1,6 @@
 name: "Tell Merge All to Dependabot"
 description: "Tell Merge All to Dependabot"
 
-permissions:
-  pull-requests: write
-
 on:
   pull_request:
     types: [opened, synchronize]
@@ -15,6 +12,8 @@ jobs:
     steps:
       - name: Post merge comment
         uses: actions/github-script@v6
+        env:
+          GITHUB_TOKEN: ${{ secrets.MY_PERSONAL_TOKEN }}
         with:
           script: |
             github.rest.issues.createComment({
