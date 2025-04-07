@@ -5,23 +5,12 @@ on:
   pull_request:
     types: [opened, reopened]
 
-permissions:
-  pull-requests: write
-
 jobs:
   tell-merge-all-to-dependabot:
     runs-on: ubuntu-latest
     if: github.event.pull_request.user.login == 'dependabot[bot]'
     steps:
       - name: Post merge comment
-        uses: actions/github-script@v6
+        run: gh pr comment ${{ github.event.pull_request.number }} --body '@dependabot merge'
         env:
-          GITHUB_TOKEN: ${{ secrets.MY_PERSONAL_TOKEN }}
-        with:
-          script: |
-            github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.payload.pull_request.number,
-              body: '@dependabot merge'
-            })
+          GH_TOKEN: ${{ secrets.MY_PERSONAL_TOKEN }}
