@@ -11,6 +11,6 @@ jobs:
     if: github.event.pull_request.user.login == 'dependabot[bot]'
     steps:
       - name: Post merge comment
-        run: gh pr comment ${{ github.event.pull_request.number }} --body '@dependabot merge'
+        run: gh pr comment --repo ${{ github.repository }} ${{ github.event.pull_request.number }} --body '@dependabot merge'
         env:
           GH_TOKEN: ${{ secrets.MY_PERSONAL_TOKEN }}
