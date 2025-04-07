@@ -3,7 +3,7 @@ description: "Tell Merge All to Dependabot"
 
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [opened, reopened]
 
 permissions:
   pull-requests: write
