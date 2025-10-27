@@ -24,7 +24,7 @@
     "@tanstack/router-devtools": "^1.132.23",
     "@tanstack/router-plugin": "^1.132.56",
     "@types/react": "^19.1.13",
-    "@types/react-dom": "^19.2.0",
+    "@types/react-dom": "^19.2.2",
     "@vitejs/plugin-react-swc": "^4.1.0",
     "eslint": "^9.38.0",
     "eslint-plugin-react-hooks": "^7.0.0",
