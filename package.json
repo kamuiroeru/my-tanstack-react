@@ -11,7 +11,7 @@
     "format": "./node_modules/.bin/biome format --write --unsafe ./src"
   },
   "dependencies": {
-    "@tanstack/react-router": "^1.131.50",
+    "@tanstack/react-router": "^1.133.32",
     "react": "^19.1.1",
     "react-dom": "^19.2.0",
     "tailwindcss": "^4.1.13",
